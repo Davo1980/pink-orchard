@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Pink Orchard: A Narrative Journey</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background: #fffaf3;
+      color: #333;
+      line-height: 1.6;
+    }
+    .section {
+      padding: 80px 20px;
+      max-width: 800px;
+      margin: auto;
+      position: relative;
+    }
+    .title {
+      font-size: 2.5em;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .hotspot {
+      color: #b3541e;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .tooltip {
+      display: none;
+      position: absolute;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 250px;
+      z-index: 10;
+    }
+    .image {
+      width: 100%;
+      height: auto;
+      margin-top: 30px;
+      border: 1px solid #ccc;
+    }
+    audio {
+      display: block;
+      margin: 30px auto;
+    }
+    blockquote {
+      font-style: italic;
+      color: #555;
+      margin: 20px 0;
+      padding-left: 20px;
+      border-left: 3px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <div class="title">The Pink Orchard: A Narrative Journey</div>
+    <audio controls>
+      <source src="https://upload.wikimedia.org/wikipedia/commons/3/39/Birds_chirping_in_the_morning.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+    <p>
+      <strong>Spring, 1888.</strong> Van Gogh arrives in <span class="hotspot" data-tooltip="A town in the south of France where Van Gogh sought peace and vibrant sunlight for inspiration.">Arles</span>, chasing sunlight and hope. The skies are brilliant. The orchards—on the brink of blooming.
+    </p>
+    <p>
+      He paints like a man racing time. The <span class="hotspot" data-tooltip="Van Gogh wrote frequently to his brother Theo, sharing thoughts, techniques, and emotional struggles.">letters to Theo</span> speak of urgency, joy, and color: "I must paint them—quickly—before they vanish."
+    </p>
+    <blockquote>
+      "The trees are in blossom and I’m longing to paint a Provence orchard with pink peach trees."
+      <br>– Letter to Theo, March 1888
+    </blockquote>
+    <img src="/mnt/data/De_roze_boomgaard_-_s0026V1962_-_Van_Gogh_Museum.jpg" alt="The Pink Orchard by Van Gogh" class="image">
+  </div>
+
+  <div class="section">
+    <p>
+      <strong>The orchard blossoms.</strong> Soft pinks, whites, and pale greens swirl across the canvas. Each tree, each bloom, a testament to rebirth.
+      Inspired by <span class="hotspot" data-tooltip="Van Gogh deeply admired Japanese woodblock prints and incorporated their flat color, bold outlines, and simplified perspective.">Japanese prints</span>, the composition is quiet and balanced.
+    </p>
+    <p>
+      In this calm, Van Gogh dreams of a collective art haven: the <span class="hotspot" data-tooltip="Vincent hoped to create a vibrant artist colony in Arles, a 'Studio of the South,' inviting artists like Gauguin to join him.">Studio of the South</span>.
+    </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Vincent_van_Gogh_-_Orchard_in_Blossom_%28Plum_Trees%29_-_Google_Art_Project.jpg" alt="Orchard in Blossom (Plum Trees)" class="image">
+  </div>
+
+  <div class="section">
+    <p>
+      But the peace is short-lived. As the blossoms fade, so does Vincent's sense of clarity. Still, the orchard remains.
+    </p>
+    <p>
+      It stands as a symbol—not just of spring—but of fragile joy, quiet hope, and the eternal beauty of impermanence.
+    </p>
+    <blockquote>
+      "The beginning of spring is so beautiful—there is a tenderness and silence in it that no brush can fully capture."
+      <br>– Letter to Theo, April 1888
+    </blockquote>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Vincent_van_Gogh_-_Almond_Blossom_-_Google_Art_Project.jpg" alt="Almond Blossom by Van Gogh" class="image">
+  </div>
+
+  <script>
+    const hotspots = document.querySelectorAll('.hotspot');
+
+    hotspots.forEach(hotspot => {
+      const tooltip = document.createElement('div');
+      tooltip.className = 'tooltip';
+      tooltip.innerText = hotspot.dataset.tooltip;
+      hotspot.appendChild(tooltip);
+
+      hotspot.addEventListener('mouseenter', () => {
+        tooltip.style.display = 'block';
+      });
+
+      hotspot.addEventListener('mouseleave', () => {
+        tooltip.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>
